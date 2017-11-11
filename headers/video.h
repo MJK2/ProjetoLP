@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -6,7 +7,7 @@ class Video{
     protected:
         int id;
         string nome;
-        string categoria;
+        vector<string> categoria;
         string duracao;
         string descricao;
 
@@ -19,6 +20,5 @@ class Video{
         void setNome(string new_nome);
         void setDuracao(string new_duracao);
 
-        void deleteVideo();
         void printVideo();
 };
