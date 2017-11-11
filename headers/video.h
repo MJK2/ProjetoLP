@@ -8,6 +8,7 @@ class Video{
         string nome;
         string categoria;
         string duracao;
+        string descricao;
 
     public:  
         int getId();
