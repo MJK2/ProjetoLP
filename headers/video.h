@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include "categoria.h"
 
 using namespace std;
 
@@ -7,7 +8,7 @@ class Video{
     protected:
         int id;
         string nome;
-        vector<string> categoria;
+        vector<Categoria> categoria;
         string duracao;
         string descricao;
 
@@ -22,5 +23,6 @@ class Video{
         void setNome(string new_nome);
         void setDuracao(string new_duracao);
 
-        void printVideo();
+        virtual void printVideo();
+        virtual Video getVideo();
 };
