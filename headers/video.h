@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include "categoria.h"
+#include "date.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ class Video{
         vector<Categoria> categoria;
         string duracao;
         string descricao;
+        Date data_lancamento;
 
     public:  
         Video();
