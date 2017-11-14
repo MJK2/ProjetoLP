@@ -12,6 +12,8 @@ class Video{
         string descricao;
 
     public:  
+        Video();
+
         int getId();
         string getNome();
         string getDuracao();
