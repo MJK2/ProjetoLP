@@ -1,3 +1,11 @@
+//
+/**
+
+classe que será o meio enytre os dados, objetos e usuario
+
+
+*/
+
 #include "video.h"
 
 class Controller{

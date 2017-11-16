@@ -25,6 +25,6 @@ class Video{
         void setNome(string new_nome);
         void setDuracao(string new_duracao);
 
-        virtual void printVideo();
-        virtual Video getVideo();
+        virtual void printVideo()=0;
+        virtual Video getVideo()=0;
 };
