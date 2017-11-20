@@ -1,3 +1,6 @@
+#ifndef DATE_H
+#define DATE_H
+
 #include <iostream>
 
 using namespace std;
@@ -36,3 +39,5 @@ struct Date{
             cout << this->dia << "/" << this->mes << "/" << this->ano << endl;
         }
 };
+
+#endif

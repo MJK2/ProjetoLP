@@ -1,3 +1,6 @@
+#ifndef VIDEO_H
+#define VIDEO_H
+
 #include <string>
 #include <vector>
 #include "categoria.h"
@@ -28,3 +31,5 @@ class Video{
         virtual void printVideo();
         virtual Video getVideo();
 };
+
+#endif
