@@ -1,37 +1,38 @@
+
+/**
+ * @file serie.h
+ */
+
+#ifndef SERIE_HPP
+#define SERIE_HPP
+
 #include <string>
 #include <vector>
 #include "categoria.h"
 #include "date.h"
 
 using namespace std;
-
-class Serie{
+/*
+ *@class Serie
+ *@brief Classe para criar objetos Serie. */
+class Serie: public Video{
     protected:
-        int id;
-        string nome;
-        vector<Categoria> categoria;
         Epsodio **temporada; // uma matriz de epsodios
         int n_temporada;
-        Date data_lancamento;
 
     public:  
         Serie();
 
-        int getId();
-        string getNome();
-        string getDuracao();
+        // GETTERS
         Epsodio getEpsodio(); // acho q tem algo nebuloso aqui; mas nao sei o q é
         int getN_Temporada();
-        string getDescrição();
-
 
         // SETTERS
-        void setId(int new_id);
-        void setNome(string new_nome);
-        void setDuracao(string new_duracao);
-        void setEpsodio(Epsodio ep); // aqui tbm tem algo estranho. alguem com um entendimento melhor verifica
-        // setN_Temporada(int n); acho desnecessario, pois isso ficaria a cargo de uma criação de uma nova temporada
+        void setEpsodio(Epsodio ep); // 
+        void setN_Temporada(int n); //
 
         virtual void printSerie();
         virtual Serie getSerie();
 };
+
+#endif
