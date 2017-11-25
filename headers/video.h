@@ -30,7 +30,8 @@ class Video{
         string getNome();
         string getDuracao();
         string getDescricao();
-        Date getDataLancamento()
+        Date getDataLancamento();
+        vector<Categoria> getCategoria();
 
         void setId(int new_id);
         void setNome(string new_nome);
@@ -38,6 +39,7 @@ class Video{
         void setDescricao(string new_descricao);
         void setDataLancamento(date new_data_lancamento);
         void setVideo(int new_id, string new_nome, string new_duracao);
+        void setCategoria(vector<Categoria> new_categoria);
 
         virtual void printVideo();
         virtual Video getVideo();
