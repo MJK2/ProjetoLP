@@ -24,6 +24,7 @@ class Video{
                 string new_nome, 
                 string descricao, 
                 string new_duracao, 
+                vector<Categoria> categoria,
                 Date new_data_lancamento);
 
         int getId();
@@ -41,6 +42,7 @@ class Video{
         void setVideo(int new_id, string new_nome, string new_duracao);
         void setCategoria(vector<Categoria> new_categoria);
 
+        void printCategorias();
         virtual void printVideo();
         virtual Video getVideo();
 };
