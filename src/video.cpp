@@ -5,12 +5,12 @@ Video::Video(){
     this->nome = "Sem nome.";
     this->duracao = "Sem duracao.";
     this->descricao = "Sem descricao.";
-    this->categoria.push_back('Sem categoria.');
+    this->categoria.push_back("Sem categoria.");
 }
 
 Video::Video(int new_id,
       string new_nome,
-      string descricao,
+      string new_descricao,
       string new_duracao,
       Date new_data_lancamento,
       vector<string> new_categoria)
@@ -48,7 +48,7 @@ void Video::setCategoria(vector<string> new_categoria){
     this->categoria = new_categoria;
 }
 
-void Video::setVideo(int new_id, string new_nome, string new_duracao, string new_descricao, Date new_data_lancamento, vector<Categoria> new_categoria){
+void Video::setVideo(int new_id, string new_nome, string new_duracao, string new_descricao, Date new_data_lancamento, vector<string> new_categoria){
     this->setId(new_id);
     this->setNome(new_nome);
     this->setDuracao(new_duracao);
@@ -82,8 +82,8 @@ vector<string> Video::getCategoria(){
 }
 
 void Video::printCategorias(){
-    for(auto it this->categoria.begin(); it < this->categoria.end(); it++)
-        cout << it << "| "
+    for(auto it (this->categoria.begin()); it < this->categoria.end(); it++)
+        cout << *it << "| ";
     cout << endl;
 }
 
