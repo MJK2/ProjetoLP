@@ -44,7 +44,6 @@ class Video{
 
         void printCategorias();
         virtual void printVideo();
-        virtual Video getVideo();
 };
 
 #endif
