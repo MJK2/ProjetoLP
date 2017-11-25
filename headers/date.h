@@ -11,6 +11,12 @@ struct Date{
         int mes;
         int ano;
     public:
+        Date(){
+            this->dia = 0;
+            this->mes = 0;
+            this->ano = 0;
+        }
+
         Date(int dia, int mes, int ano){
             this->dia = dia;
             this->mes = mes;
