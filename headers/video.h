@@ -20,13 +20,24 @@ class Video{
     public:  
         Video();
 
+        Video(  int new_id, 
+                string new_nome, 
+                string descricao, 
+                string new_duracao, 
+                Date new_data_lancamento);
+
         int getId();
         string getNome();
         string getDuracao();
+        string getDescricao();
+        Date getDataLancamento()
 
         void setId(int new_id);
         void setNome(string new_nome);
         void setDuracao(string new_duracao);
+        void setDescricao(string new_descricao);
+        void setDataLancamento(date new_data_lancamento);
+        void setVideo(int new_id, string new_nome, string new_duracao);
 
         virtual void printVideo();
         virtual Video getVideo();
