@@ -8,8 +8,9 @@ using namespace std;
 class Categoria{
     public:
         Categoria();
+        Categoria(string new_categoria);
 
-        void setCategoria();
+        void setCategoria(string new_categoria);
         string getCategoria();
     private:
         string categoria;        
