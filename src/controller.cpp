@@ -28,19 +28,23 @@ Controller::Controller(){
                 cout << "Digite um número válido." << endl;
             }
         }
-        else
-        {
-            cout << "Digite uma opção válida." << endl;
-        }
     }
 }
 
 void Controller::consultarCatalogo()
 {
-    cout << "Consultar Catálogo" << endl;
+    cout << "======== Consultar Catálogo ========" << endl;
+    cout << "Qual catálogo deseja consultar?" << endl;
+    cout << "1 - Filmes" << endl;
+    cout << "2 - Documentarios" << endl;
+    cout << "3 - Séries" << endl;
 }
 
 void Controller::gerenciarCatalogo()
 {
-    cout << "Gerenciar Catálogo" << endl;
+    cout << "======== Gerenciar Catálogo ========" << endl;
+    cout << "Qual catálogo deseja gerenciar?" << endl;
+    cout << "1 - Filmes" << endl;
+    cout << "2 - Documentarios" << endl;
+    cout << "3 - Séries" << endl;
 }

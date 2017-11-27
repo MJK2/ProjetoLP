@@ -48,15 +48,6 @@ void Video::setCategoria(vector<string> new_categoria){
     this->categoria = new_categoria;
 }
 
-void Video::setVideo(int new_id, string new_nome, string new_duracao, string new_descricao, Date new_data_lancamento, vector<string> new_categoria){
-    this->setId(new_id);
-    this->setNome(new_nome);
-    this->setDuracao(new_duracao);
-    this->setDescricao(new_descricao);
-    this->setDataLancamento(new_data_lancamento);
-    this->setCategoria(new_categoria);
-}
-
 int Video::getId(){
     return this->id;
 }

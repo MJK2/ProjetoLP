@@ -39,11 +39,11 @@ class Video{
         void setDuracao(string new_duracao);
         void setDescricao(string new_descricao);
         void setDataLancamento(Date new_data_lancamento);
-        void setVideo(int new_id, string new_nome, string new_duracao, string new_descricao, Date new_data_lancamento, vector<string> new_categoria);
         void setCategoria(vector<string> new_categoria);
 
         void printCategorias();
         virtual void printVideo();
+        virtual void setVideo();
 };
 
 #endif
