@@ -25,8 +25,18 @@ class Filme : Video
     *@brief Função sobrecarregada para mostrar este objeto
     */
     void printVideo();
-    void setVideo();
-    Video getVideo();
+
+    void setVideo(int new_id,
+		      string new_nome,
+		      string new_descricao,
+		      string new_duracao,
+		      Date new_data_lancamento,
+		      vector<string> new_categoria, 
+		      string diretor,
+		      vector<string> elenco);
+    
+    void setDiretor(string new_diretor);
+    void setElenco(vector<string> new_elenco);
     
     /*
     *@brief função para mostrar o elenco
