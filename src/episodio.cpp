@@ -53,3 +53,7 @@ int Episodio::getTemporada(){
 int Episodio::getEp(){
     return this->num_ep;
 }
+
+void Episodio::printVideo(){
+    
+}

@@ -78,3 +78,6 @@ void Video::printCategorias(){
     cout << endl;
 }
 
+void Video::printVideo(){
+    /* empty */
+}
