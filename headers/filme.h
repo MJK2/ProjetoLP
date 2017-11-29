@@ -40,6 +40,7 @@ class Filme : Video
     *@brief função para mostrar o elenco
     */
     void showElenco(); 
+    string writeFilme();
 
   private:
     string diretor;

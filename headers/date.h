@@ -44,6 +44,11 @@ struct Date{
         void printDate(){
             cout << this->dia << "/" << this->mes << "/" << this->ano << endl;
         }
+
+        string toString(){
+            string data = to_string(this->dia) + "/" + to_string(this->mes) + "/" + to_string(this->ano);
+            return data;
+        }
 };
 
 #endif

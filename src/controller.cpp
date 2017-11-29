@@ -1,4 +1,5 @@
 #include "../headers/controller.h"
+#include <fstream>
 
 Controller::Controller(){
     bool control = true;
@@ -34,6 +35,15 @@ Controller::Controller(){
             throw "ENTRADA INVALIDA";
         }
      }
+}
+
+Controller::~Controller(){
+    ofstream filmes;
+    filmes.open ("data/filmes.dat");
+    for (auto it(this->filmes.begin()); it != this->filmes.end(); it++){
+        filmes << it->writeFilme() << endl;
+    }
+    filmes.close();
 }
 
 void Controller::consultarCatalogo()
@@ -149,6 +159,8 @@ void Controller::adicionarFilme(){
     cin >> nome;
     cout << "Descricao: " << endl;
     cin >> descricao;
+    cout << "Duração: " << endl;
+    cin >> duracao;
     cout << "Categorias do filme: " << endl;
     categorias = this->adicionarCategorias();
     cout << "Nome do diretor: " << endl;

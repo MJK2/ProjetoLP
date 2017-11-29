@@ -8,6 +8,7 @@
 class Controller{
     public:
         Controller();
+        ~Controller();
 
         void consultarCatalogo();
         void gerenciarCatalogo();

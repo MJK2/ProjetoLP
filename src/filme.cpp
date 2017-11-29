@@ -62,3 +62,23 @@ void Filme::showElenco(){
 		cout << *it << endl;
 	}
 }
+
+string Filme::writeFilme(){
+	string filme = "";
+
+	filme = this->nome +", " +
+			this->descricao+", " +
+			this->duracao+", " +
+			this->data_lancamento.toString()+", "+
+			this->diretor + ", | ";
+	for( auto it(this->categoria.begin()); it != this->categoria.end(); it++ ){
+		filme += *it + " ";
+	}
+	filme += "| |";
+	for( auto i(this->elenco.begin()); i != this->elenco.end(); i++ ){
+		filme += *i + " ";
+	}
+	filme += "|";
+
+	return filme;
+}
