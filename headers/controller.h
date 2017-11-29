@@ -11,12 +11,15 @@ class Controller{
 
         void consultarCatalogo();
         void gerenciarCatalogo();
+
+        void gerenciarFilmes();
+        void gerenciarDocumentarios();
+        void gerenciarSeries();
     
     private:
         vector<Filme> filmes;
         vector<Documentario> documentarios;
         vector<Serie> series;      
-
 };
 
 #endif
