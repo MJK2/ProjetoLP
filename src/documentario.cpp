@@ -8,7 +8,6 @@ Documentario::Documentario(){
 }
 
 Documentario::Documentario(
-    int new_id,
     string new_nome,
     string new_descricao,
     string new_duracao,
@@ -16,7 +15,6 @@ Documentario::Documentario(
     Date new_data_lancamento,
     string diretor)
 {
-    this->id = new_id;
     this->nome = new_nome;
     this->duracao = new_duracao;
     this->descricao = new_descricao;
@@ -34,8 +32,7 @@ void Documentario::setDiretor(string new_diretor){
 }
 
 void Documentario::printVideo(){
-    cout << "ID: " << getId() << endl
-         << "Nome: " << getNome() << endl
+    cout << "Nome: " << getNome() << endl
          << "Diretor: " << this->getDiretor() << endl
          << "Descrição: " << getDescricao() << endl
          << "Duração: " << getDuracao() << endl
