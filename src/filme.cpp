@@ -74,7 +74,7 @@ string Filme::writeFilme(){
 	for( auto it(this->categoria.begin()); it != this->categoria.end(); it++ ){
 		filme += *it + " ";
 	}
-	filme += "| |";
+	filme += "| | ";
 	for( auto i(this->elenco.begin()); i != this->elenco.end(); i++ ){
 		filme += *i + " ";
 	}

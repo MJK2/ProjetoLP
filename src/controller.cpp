@@ -166,7 +166,7 @@ void Controller::adicionarFilme(){
     cout << "Nome do diretor: " << endl;
     cin >> diretor;
     cout << "Elenco: " << endl;
-    categorias = this->adicionarElenco();
+    elenco = this->adicionarElenco();
 
     Filme filme(nome,
                 descricao,
