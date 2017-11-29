@@ -4,6 +4,7 @@ Controller::Controller(){
     bool control = true;
     int option;
 
+    system("clear");
     cout << "======== Catálogo de vídeos ========" << endl;
     cout << "Aperte o botão da ação desejada: " << endl;
     cout << "1 - Consultar catálogo" << endl;
@@ -33,6 +34,8 @@ Controller::Controller(){
 
 void Controller::consultarCatalogo()
 {
+    system("clear");
+
     cout << "======== Consultar Catálogo ========" << endl;
     cout << "Qual catálogo deseja consultar?" << endl;
     cout << "1 - Filmes" << endl;
@@ -42,6 +45,8 @@ void Controller::consultarCatalogo()
 
 void Controller::gerenciarCatalogo()
 {
+    system("clear");
+
     cout << "======== Gerenciar Catálogo ========" << endl;
     cout << "Qual catálogo deseja gerenciar?" << endl;
     cout << "1 - Filmes" << endl;

@@ -12,8 +12,7 @@
 class Filme : Video
 {
   public:
-    Filme(int new_id,
-      string new_nome,
+    Filme(string new_nome,
       string new_descricao,
       string new_duracao,
       Date new_data_lancamento,
@@ -26,8 +25,7 @@ class Filme : Video
     */
     void printVideo();
 
-    void setVideo(int new_id,
-		      string new_nome,
+    void setVideo(string new_nome,
 		      string new_descricao,
 		      string new_duracao,
 		      Date new_data_lancamento,

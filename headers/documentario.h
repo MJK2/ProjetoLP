@@ -7,8 +7,7 @@
 class Documentario : Video{
     public:
         Documentario();
-        Documentario(int new_id,
-                     string new_nome,
+        Documentario(string new_nome,
                      string new_descricao,
                      string new_duracao,
                      vector<string> categoria,

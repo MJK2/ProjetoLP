@@ -7,8 +7,7 @@
 class Episodio : Video
 {
     public:
-        Episodio(int new_id,
-        string new_nome,
+        Episodio(string new_nome,
         string new_descricao,
         string new_duracao,
         Date new_data_lancamento,
@@ -21,8 +20,7 @@ class Episodio : Video
         */
         void printVideo();
 
-        void setVideo(int new_id,
-        string new_nome,
+        void setVideo(string new_nome,
         string new_descricao,
         string new_duracao,
         Date new_data_lancamento,

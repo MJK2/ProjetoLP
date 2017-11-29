@@ -11,11 +11,12 @@ class Controller{
 
         void consultarCatalogo();
         void gerenciarCatalogo();
+    
+    private:
+        vector<Filme> filmes;
+        vector<Documentario> documentarios;
+        vector<Serie> series;      
 
-        void cadastrarVideo(Video video);
-        void editarVideo(Video video);
-        void deletarVideo(Video video);
-        void buscarVideo();
 };
 
 #endif

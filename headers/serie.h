@@ -1,5 +1,5 @@
-#ifndef SERIE_HPP
-#define SERIE_HPP
+#ifndef SERIE_H
+#define SERIE_H
 
 #include <string>
 #include <vector>
@@ -13,12 +13,13 @@ using namespace std;
  *@brief Classe para criar objetos Serie. */
 class Serie{
     private:
-        int temporadas;
-        Episodio** lista;
+        string nome;
+        vector<vector<Episodio>> temporadas;
         vector<string> categoria;
 
     public:  
-        Serie(int temporadas, vector<string> new_categoria);
+        Serie();
+        Serie(vector<vector<Episodio>> new_temporadas);
 
 };
 

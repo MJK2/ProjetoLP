@@ -1,7 +1,6 @@
 #include "../headers/episodio.h"
 
-Episodio::Episodio(int new_id,
-        string new_nome,
+Episodio::Episodio(string new_nome,
         string new_descricao,
         string new_duracao,
         Date new_data_lancamento,
@@ -9,7 +8,6 @@ Episodio::Episodio(int new_id,
         int num_ep,
         int temporada)
 {
-    this->id = new_id;
     this->nome = new_nome;
     this->descricao = new_descricao;
     this->duracao = new_duracao;
@@ -19,8 +17,7 @@ Episodio::Episodio(int new_id,
     this->temporada = temporada;
 }
 
-void Episodio::setVideo(int new_id,
-        string new_nome,
+void Episodio::setVideo(string new_nome,
         string new_descricao,
         string new_duracao,
         Date new_data_lancamento,
@@ -28,7 +25,6 @@ void Episodio::setVideo(int new_id,
         int num_ep,
         int temporada)
 {
-    this->id = new_id;
     this->nome = new_nome;
     this->descricao = new_descricao;
     this->duracao = new_duracao;

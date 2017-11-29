@@ -7,8 +7,7 @@
 /*
  *@brief Construtor de objeto Filme
  */
-Filme::Filme(int new_id,
-		      string new_nome,
+Filme::Filme( string new_nome,
 		      string new_descricao,
 		      string new_duracao,
 		      Date new_data_lancamento,
@@ -16,7 +15,6 @@ Filme::Filme(int new_id,
 		      string diretor,
 		      vector<string> elenco)
 {
-	this->id = new_id;
 	this->nome = new_nome;
 	this->descricao = new_descricao;
 	this->duracao = new_duracao;
@@ -33,8 +31,7 @@ void Filme::printVideo(){
 	cout << "Diretor: " << diretor << std::endl;
 	showElenco();
 }
-void Filme::setVideo(int new_id,
-		      string new_nome,
+void Filme::setVideo(string new_nome,
 		      string new_descricao,
 		      string new_duracao,
 		      Date new_data_lancamento,
@@ -42,7 +39,6 @@ void Filme::setVideo(int new_id,
 		      string diretor,
 		      vector<string> elenco)
 {
-	this->id = new_id;
 	this->nome = new_nome;
 	this->descricao = new_descricao;
 	this->duracao = new_duracao;

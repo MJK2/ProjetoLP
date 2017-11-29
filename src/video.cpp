@@ -8,14 +8,13 @@ Video::Video(){
     this->categoria.push_back("Sem categoria.");
 }
 
-Video::Video(int new_id,
+Video::Video(
       string new_nome,
       string new_descricao,
       string new_duracao,
       Date new_data_lancamento,
       vector<string> new_categoria)
 {
-    this->id = new_id;
     this->nome = new_nome;
     this->duracao = new_duracao;
     this->descricao = new_descricao;
@@ -23,10 +22,6 @@ Video::Video(int new_id,
     this->categoria = new_categoria;
 }
 
-void Video::setId(int new_id)
-{
-    this->id = new_id;
-}
 
 void Video::setNome(string new_nome){
     this->nome = new_nome;
@@ -46,10 +41,6 @@ void Video::setDataLancamento(Date new_data_lancamento){
 
 void Video::setCategoria(vector<string> new_categoria){
     this->categoria = new_categoria;
-}
-
-int Video::getId(){
-    return this->id;
 }
 
 string Video::getNome(){
