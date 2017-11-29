@@ -2,7 +2,6 @@
 #define DOCUMENTARIO_H
 
 #include "video.h"
-#include "categoria.h"
 
 class Documentario : Video{
     public:

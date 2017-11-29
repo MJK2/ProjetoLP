@@ -73,12 +73,19 @@ void Controller::gerenciarCatalogo()
 
 void Controller::gerenciarFilmes(){
     system("clear");
+    int option;
 
     cout << "======== Gerenciar Filme ========" << endl;
     cout << "O que deseja fazer?" << endl;
     cout << "1 - Adicionar" << endl;
     cout << "2 - Editar" << endl;
     cout << "3 - Excluir" << endl;
+
+    if(cin >> option){
+        if(option == 1){
+            this->adicionarFilme();
+        }
+    }
 }
 
 void Controller::gerenciarDocumentarios(){
@@ -99,4 +106,65 @@ void Controller::gerenciarSeries(){
     cout << "1 - Adicionar" << endl;
     cout << "2 - Editar" << endl;
     cout << "3 - Excluir" << endl;
+}
+
+vector<string> Controller::adicionarCategorias(){
+    vector<string> categorias;
+    string cat;
+    
+    cout << "Digite uma categoria por vez (digite 'fim' para indicar que já adicionou todas)" << endl;
+    while(cin >> cat && cat != "fim"){
+        categorias.push_back(cat);
+    }
+
+    return categorias;
+}
+
+vector<string> Controller::adicionarElenco(){
+    vector<string> elenco;
+    string ator;
+    
+    cout << "Digite um ator por vez (digite 'fim' para indicar que já adicionou todas)" << endl;
+    while(cin >> ator && ator != "fim"){
+        elenco.push_back(ator);
+    }
+
+    return elenco;
+}
+
+
+void Controller::adicionarFilme(){
+    system("clear");
+
+    string nome;
+    string descricao;
+    string duracao;
+    Date data_lancamento;
+    vector<string> categorias; 
+    string diretor;
+    vector<string> elenco;
+
+    cout << "======== Adicionar Filme ========" << endl;
+    cout << "Título do filme: " << endl;
+    cin >> nome;
+    cout << "Descricao: " << endl;
+    cin >> descricao;
+    cout << "Categorias do filme: " << endl;
+    categorias = this->adicionarCategorias();
+    cout << "Nome do diretor: " << endl;
+    cin >> diretor;
+    cout << "Elenco: " << endl;
+    categorias = this->adicionarElenco();
+
+    Filme filme(nome,
+                descricao,
+                duracao,
+                data_lancamento,
+                categorias,
+                diretor,
+                elenco);
+    
+    this->filmes.push_back(filme);
+
+    cout << "Filme adicionado com sucesso!" << endl;
 }
