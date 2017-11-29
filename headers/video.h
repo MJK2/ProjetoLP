@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-#include "categoria.h"
 #include "date.h"
 
 using namespace std;
