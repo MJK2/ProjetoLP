@@ -29,6 +29,7 @@ class Controller
     void adicionarDocumentario();
     void listarDocumentarios();
     void editarDocumentario();
+    void excluirDocumentario();
 
     //conversores
     Filme stringToFilme(string line);

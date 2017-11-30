@@ -277,7 +277,7 @@ void Controller::gerenciarDocumentarios(){
         }
         else if (option == 3)
         {
-            
+            this->excluirDocumentario();
         }
     }
 }
@@ -572,6 +572,29 @@ void Controller::editarDocumentario()
                                         diretor);
 
     cout << "DOCUMENTARIO EDITADO COM SUCESSO! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
+
+    this->gerenciarDocumentarios();
+}
+
+void Controller::excluirDocumentario()
+{
+    system("clear");
+    int count = 1, id;
+    cout << "======== Editar Documentario ========" << endl;
+    cout << "Informe o número do filme que desejas excluir." << endl;
+
+    for (auto it(this->documentarios.begin()); it != this->documentarios.end(); it++)
+    {
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    cin >> id;
+    this->documentarios.erase(this->documentarios.begin() + (id - 1));
+    cout << "DOCUMENTÁRIO EXCLUÍDO COM SUCESSO! Aperte ENTER para continuar" << endl;
 
     cin.ignore();
     cin.get();
