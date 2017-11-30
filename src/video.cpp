@@ -1,5 +1,8 @@
+/**
+* @file video.cpp
+* @brief Implementação de um header referente a criacao da classe Video.
+*/
 #include "../headers/video.h"
-
 
 Video::Video(){
     this->nome = "Sem nome.";
@@ -21,7 +24,6 @@ Video::Video(
     this->data_lancamento = new_data_lancamento;
     this->categoria = new_categoria;
 }
-
 
 void Video::setNome(string new_nome){
     this->nome = new_nome;
