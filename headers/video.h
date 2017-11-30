@@ -11,7 +11,7 @@
 
 using namespace std;
 
-/// Classe que representa um Video. Pai das classes Documentario, Serie, Filme e Episodio.
+/// Classe que representa um Video. Pai das classes Documentario e Filme.
 class Video{
     protected:
         /// O nome do video.

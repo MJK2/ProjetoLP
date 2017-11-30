@@ -68,7 +68,7 @@ class Controller
     /// @brief Pede-se ao usuario a entrada de categorias de um video.
     vector<string> adicionarCategorias();
     /// @return um vector de string que representam o elenco presente em um video.
-    /// @brief Pede-se ao usuario a entrada de categorias de um video.
+    /// Pede-se ao usuario a entrada de categorias de um video.
     vector<string> adicionarElenco();
 };
 
