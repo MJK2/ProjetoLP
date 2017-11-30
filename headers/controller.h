@@ -19,6 +19,9 @@ class Controller{
         void excluirFilme();
         void listarFilmes();
         void listarFilme();
+
+        //conversores
+        Filme stringToFilme(string line);
     
     private:
         vector<Filme> filmes;

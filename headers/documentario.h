@@ -3,6 +3,8 @@
 
 #include "video.h"
 
+using namespace std;
+
 class Documentario : Video{
     public:
         Documentario();

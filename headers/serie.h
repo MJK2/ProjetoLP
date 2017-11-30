@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-#include "date.h"
 #include "episodio.h"
 
 using namespace std;

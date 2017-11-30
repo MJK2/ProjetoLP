@@ -10,7 +10,7 @@
 Filme::Filme( string new_nome,
 		      string new_descricao,
 		      string new_duracao,
-		      Date new_data_lancamento,
+		      string new_data_lancamento,
 		      vector<string> new_categoria, 
 		      string diretor,
 		      vector<string> elenco)
@@ -27,7 +27,7 @@ Filme::Filme( string new_nome,
 void Filme::printVideo(){
 	cout << "Título: " << getNome() << endl;
 	cout << "Duração: " << getDuracao() << endl;
-	cout << "Descrição: \n" << getDescricao() << endl;
+	cout << "Descrição: " << getDescricao() << endl;
 	cout << "Diretor: " << diretor << std::endl;
 	showElenco();
 }
@@ -35,7 +35,7 @@ void Filme::printVideo(){
 void Filme::setVideo(string new_nome,
 		      string new_descricao,
 		      string new_duracao,
-		      Date new_data_lancamento,
+		      string new_data_lancamento,
 		      vector<string> new_categoria, 
 		      string diretor,
 		      vector<string> elenco)
@@ -67,15 +67,15 @@ void Filme::showElenco(){
 string Filme::writeFilme(){
 	string filme = "";
 
-	filme = this->nome +", " +
-			this->descricao+", " +
-			this->duracao+", " +
-			this->data_lancamento.toString()+", "+
-			this->diretor + ", | ";
+	filme = this->nome +" " +
+			this->descricao+" " +
+			this->duracao+" " +
+			this->data_lancamento+" "+
+			this->diretor + " |";
 	for( auto it(this->categoria.begin()); it != this->categoria.end(); it++ ){
 		filme += *it + " ";
 	}
-	filme += "| | ";
+	filme += "| |";
 	for( auto i(this->elenco.begin()); i != this->elenco.end(); i++ ){
 		filme += *i + " ";
 	}
