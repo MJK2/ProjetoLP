@@ -23,6 +23,22 @@ Documentario::Documentario(
     this->diretor = diretor;
 }
 
+void Documentario::setVideo(
+    string new_nome,
+    string new_descricao,
+    string new_duracao,
+    vector<string> new_categoria,
+    string new_data_lancamento,
+    string diretor)
+{
+    this->nome = new_nome;
+    this->duracao = new_duracao;
+    this->descricao = new_descricao;
+    this->data_lancamento = new_data_lancamento;
+    this->categoria = new_categoria;
+    this->diretor = diretor;
+}
+
 string Documentario::getDiretor(){
     return this->diretor;
 }

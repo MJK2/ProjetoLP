@@ -20,8 +20,16 @@ class Documentario : public Video{
         string getDiretor();
         void setDiretor(string new_diretor);
         string writeDocumentario();
+        void setVideo(
+            string new_nome,
+            string new_descricao,
+            string new_duracao,
+            vector<string> new_categoria,
+            string new_data_lancamento,
+            string diretor);
+        
 
-      private:
+    private:
         string diretor;
 };
 

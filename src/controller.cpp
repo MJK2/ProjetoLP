@@ -273,7 +273,7 @@ void Controller::gerenciarDocumentarios(){
         }
         else if (option == 2)
         {
-            
+            this->editarDocumentario();
         }
         else if (option == 3)
         {
@@ -518,4 +518,63 @@ void Controller::listarDocumentarios()
     cin.ignore();
     cin.get();
     this->consultarCatalogo();
+}
+
+void Controller::editarDocumentario()
+{
+    system("clear");
+    int count = 1, id;
+    cout << "======== Editar Documentario ========" << endl;
+    cout << "Informe o número do documentário que desejas editar." << endl;
+
+    for (auto it(this->documentarios.begin()); it != this->documentarios.end(); it++)
+    {
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    cin >> id;
+    system("clear");
+
+    string nome;
+    string descricao;
+    string duracao;
+    string data_lancamento;
+    vector<string> categorias;
+    string diretor;
+
+    cout << "======== Adicionar Documentario ========" << endl;
+    cout << "Título do filme: " << endl;
+    cin >> nome;
+    cout << "Descricao: " << endl;
+    cin >> descricao;
+    cout << "Duração: " << endl;
+    cin >> duracao;
+    cout << "Data de lançamento: " << endl;
+    cin >> data_lancamento;
+    cout << "Categorias do filme: " << endl;
+    categorias = this->adicionarCategorias();
+    cout << "Nome do diretor: " << endl;
+    cin >> diretor;
+
+    Documentario documentario(nome,
+                              descricao,
+                              duracao,
+                              categorias,
+                              data_lancamento,
+                              diretor);
+
+    this->documentarios[id-1].setVideo( nome,
+                                        descricao,
+                                        duracao,
+                                        categorias,
+                                        data_lancamento,
+                                        diretor);
+
+    cout << "DOCUMENTARIO EDITADO COM SUCESSO! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
+
+    this->gerenciarDocumentarios();
 }
