@@ -27,8 +27,9 @@ class Controller
 
     //cruds para documentario
     void adicionarDocumentario();
-    
-    //conversores
+    void listarDocumentarios();
+
+        //conversores
     Filme stringToFilme(string line);
     Documentario stringToDocumentario(string line);
 

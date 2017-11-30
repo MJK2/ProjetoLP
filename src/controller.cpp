@@ -201,7 +201,7 @@ void Controller::consultarCatalogo()
         }
         else if (option == 2)
         {
-            
+            this->listarDocumentarios();
         }
         else if (option == 3)
         {
@@ -484,8 +484,6 @@ void Controller::adicionarDocumentario()
     cout << "Nome do diretor: " << endl;
     cin >> diretor;
 
-
-
     Documentario documentario(  nome,
                                 descricao,
                                 duracao,
@@ -501,4 +499,23 @@ void Controller::adicionarDocumentario()
     cin.get();
 
     this->gerenciarDocumentarios();
+}
+
+void Controller::listarDocumentarios()
+{
+    system("clear");
+
+    int count = 1;
+    cout << "======== Documentarios ========" << endl;
+    cout << "Aperte ENTER para voltar" << endl;
+
+    for (auto it(this->documentarios.begin()); it != this->documentarios.end(); it++)
+    {
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    cin.ignore();
+    cin.get();
+    this->consultarCatalogo();
 }

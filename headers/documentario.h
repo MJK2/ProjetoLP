@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Documentario : Video{
+class Documentario : public Video{
     public:
         Documentario();
         Documentario(string new_nome,
