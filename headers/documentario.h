@@ -19,8 +19,9 @@ class Documentario : Video{
         Video getVideo();
         string getDiretor();
         void setDiretor(string new_diretor);
+        string writeDocumentario();
 
-    private:
+      private:
         string diretor;
 };
 

@@ -57,6 +57,14 @@ Controller::~Controller(){
         filmes << it->writeFilme() << endl;
     }
     filmes.close();
+
+    ofstream documentarios;
+    filmes.open("data/documentarios.dat");
+    for (auto it(this->documentarios.begin()); it != this->documentarios.end(); it++)
+    {
+        filmes << it->writeDocumentario() << endl;
+    }
+    filmes.close();
 }
 
 Filme Controller::stringToFilme(string line){
@@ -191,12 +199,29 @@ void Controller::gerenciarFilmes(){
 
 void Controller::gerenciarDocumentarios(){
     system("clear");
+    int option;
 
     cout << "======== Gerenciar Documentários ========" << endl;
     cout << "O que deseja fazer?" << endl;
     cout << "1 - Adicionar" << endl;
     cout << "2 - Editar" << endl;
     cout << "3 - Excluir" << endl;
+
+    if (cin >> option)
+    {
+        if (option == 1)
+        {
+            this->adicionarDocumentario();
+        }
+        else if (option == 2)
+        {
+            
+        }
+        else if (option == 3)
+        {
+            
+        }
+    }
 }
 
 void Controller::gerenciarSeries(){
@@ -374,4 +399,48 @@ void Controller::excluirFilme(){
 
     this->gerenciarFilmes();
 
+}
+
+void Controller::adicionarDocumentario()
+{
+    system("clear");
+
+    string nome;
+    string descricao;
+    string duracao;
+    string data_lancamento;
+    vector<string> categorias;
+    string diretor;
+
+    cout << "======== Adicionar Documentario ========" << endl;
+    cout << "Título do filme: " << endl;
+    cin >> nome;
+    cout << "Descricao: " << endl;
+    cin >> descricao;
+    cout << "Duração: " << endl;
+    cin >> duracao;
+    cout << "Data de lançamento: " << endl;
+    cin >> data_lancamento;
+    cout << "Categorias do filme: " << endl;
+    categorias = this->adicionarCategorias();
+    cout << "Nome do diretor: " << endl;
+    cin >> diretor;
+
+
+
+    Documentario documentario(  nome,
+                                descricao,
+                                duracao,
+                                categorias,
+                                data_lancamento,
+                                diretor);
+
+    this->documentarios.push_back(documentario);
+
+    cout << "Documentário adicionado com sucesso! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
+
+    this->gerenciarDocumentarios();
 }

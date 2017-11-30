@@ -40,3 +40,21 @@ void Documentario::printVideo(){
     cout << "Categoria: ";
     this->printCategorias();
 }
+
+string Documentario::writeDocumentario()
+{
+    string documentario = "";
+
+    documentario = this->nome + " " +
+                   this->descricao + " " +
+                   this->duracao + " " +
+                   this->data_lancamento + " " +
+                   this->diretor + " |";
+    for (auto it(this->categoria.begin()); it != this->categoria.end(); it++)
+    {
+        documentario += *it + " ";
+    }
+    documentario += "|";
+
+    return documentario;
+}
