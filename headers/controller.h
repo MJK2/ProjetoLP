@@ -7,7 +7,6 @@
 
 #include "documentario.h"
 #include "filme.h"
-#include "serie.h"
 
 /// Classe que controla todo o programa
 class Controller
@@ -31,9 +30,6 @@ class Controller
     void gerenciarFilmes();
     /// Demonstra ao usuario as opcoes de gerenciamento de documentarios (adicionar, alterar ou excluir documentarios).
     void gerenciarDocumentarios();
-    /// Demonstra ao usuario as opcoes de gerenciamento de series (adicionar, alterar ou excluir series).
-    void gerenciarSeries();
-
     /// Adiciona um filme no database a partir de entradas do usuario.
     void adicionarFilme();
     /// Edita um filme ja existente no database a partir de entradas do usuario.
@@ -66,8 +62,6 @@ class Controller
     vector<Filme> filmes;
     /// Um vector de Documentarios.
     vector<Documentario> documentarios;
-    /// Um vector de Series.
-    vector<Serie> series;
 
     /// @return Um vector de strings que representam as categorias presentes em um video.
     /// Pede-se ao usuario a entrada de categorias de um video.

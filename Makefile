@@ -11,7 +11,7 @@ SRC = src/
 
 CC = g++
 CPPFLAGS = -O0 -g -pedantic -std=c++11
-OBJS = $(OBJ)main.o $(OBJ)video.o $(OBJ)filme.o $(OBJ)documentario.o $(OBJ)serie.o $(OBJ)controller.o $(OBJ)episodio.o 
+OBJS = $(OBJ)main.o $(OBJ)video.o $(OBJ)filme.o $(OBJ)documentario.o $(OBJ)controller.o
 
 build_bin: 
 	mkdir build && mkdir bin && make $(EXE)$(PROG) || make $(EXE)$(PROG)
@@ -34,12 +34,6 @@ $(OBJ)filme.o: $(INC)filme.h
 
 $(OBJ)documentario.o: $(INC)documentario.h 
 	$(CC) $(CPPFLAGS) -c $(SRC)documentario.cpp -o $@
-
-$(OBJ)serie.o: $(INC)serie.h 
-	$(CC) $(CPPFLAGS) -c $(SRC)serie.cpp -o $@
-
-$(OBJ)episodio.o: $(INC)serie.h 
-	$(CC) $(CPPFLAGS) -c $(SRC)episodio.cpp -o $@
 
 
 clean:

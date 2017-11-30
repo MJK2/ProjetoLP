@@ -74,3 +74,7 @@ void Video::printCategorias(){
 void Video::printVideo(){
     /* empty */
 }
+
+void Video::setVideo(){
+    //empty
+}

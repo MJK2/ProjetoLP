@@ -201,7 +201,6 @@ void Controller::consultarCatalogo()
     cout << "Qual catálogo deseja consultar?" << endl;
     cout << "1 - Filmes" << endl;
     cout << "2 - Documentarios" << endl;
-    cout << "3 - Séries" << endl;
 
     if (cin >> option){
         if (option == "1")
@@ -211,10 +210,6 @@ void Controller::consultarCatalogo()
         else if (option == "2")
         {
             this->listarDocumentarios();
-        }
-        else if (option == "3")
-        {
-            
         }
         else if(option == "back"){
             this->menuInicial();
@@ -235,7 +230,6 @@ void Controller::gerenciarCatalogo()
     cout << "Qual catálogo deseja gerenciar?" << endl;
     cout << "1 - Filmes" << endl;
     cout << "2 - Documentarios" << endl;
-    cout << "3 - Séries" << endl;
 
     if(cin >> option){
         if(option == "1"){
@@ -308,15 +302,6 @@ void Controller::gerenciarDocumentarios(){
     }
 }
 
-void Controller::gerenciarSeries(){
-    system("clear");
-
-    cout << "======== Gerenciar Séries ========" << endl;
-    cout << "O que deseja fazer?" << endl;
-    cout << "1 - Adicionar" << endl;
-    cout << "2 - Editar" << endl;
-    cout << "3 - Excluir" << endl;
-}
 
 vector<string> Controller::adicionarCategorias(){
     vector<string> categorias;
