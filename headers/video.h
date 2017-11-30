@@ -38,7 +38,7 @@ class Video{
 
         void printCategorias();
         virtual void printVideo();
-        void setVideo();
+        virtual void setVideo();
 };
 
 #endif
