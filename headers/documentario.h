@@ -10,7 +10,7 @@ class Documentario : Video{
                      string new_descricao,
                      string new_duracao,
                      vector<string> categoria,
-                     Date new_data_lancamento,
+                     string new_data_lancamento,
                      string diretor);
 
         void printVideo() override;

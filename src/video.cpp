@@ -57,7 +57,7 @@ string Video::getDescricao(){
     return this->descricao;
 }
 
-Date Video::getDataLancamento(){
+string Video::getDataLancamento(){
     return this->data_lancamento;
 }
 
