@@ -1,0 +1,22 @@
+\hypertarget{controller_8h}{}\section{controller.\+h File Reference}
+\label{controller_8h}\index{controller.\+h@{controller.\+h}}
+
+
+Implementação de um header referente a classe \hyperlink{classController}{Controller}, que gerencia toda a aplicacao.  
+
+
+{\ttfamily \#include \char`\"{}documentario.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filme.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}serie.\+h\char`\"{}}\\*
+Include dependency graph for controller.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classController}{Controller}
+\begin{DoxyCompactList}\small\item\em Classe que controla todo o programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementação de um header referente a classe \hyperlink{classController}{Controller}, que gerencia toda a aplicacao. 
+

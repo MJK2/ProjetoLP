@@ -497,7 +497,7 @@ void Controller::adicionarDocumentario()
     string diretor;
 
     cout << "======== Adicionar Documentario ========" << endl;
-    cout << "Título do filme: " << endl;
+    cout << "Título do documentario: " << endl;
     cin >> nome;
     cout << "Descricao: " << endl;
     cin >> descricao;
@@ -505,7 +505,7 @@ void Controller::adicionarDocumentario()
     cin >> duracao;
     cout << "Data de lançamento: " << endl;
     cin >> data_lancamento;
-    cout << "Categorias do filme: " << endl;
+    cout << "Categorias do documentario: " << endl;
     categorias = this->adicionarCategorias();
     cout << "Nome do diretor: " << endl;
     cin >> diretor;
@@ -570,7 +570,7 @@ void Controller::editarDocumentario()
     string diretor;
 
     cout << "======== Adicionar Documentario ========" << endl;
-    cout << "Título do filme: " << endl;
+    cout << "Título do documentario: " << endl;
     cin >> nome;
     cout << "Descricao: " << endl;
     cin >> descricao;
@@ -578,7 +578,7 @@ void Controller::editarDocumentario()
     cin >> duracao;
     cout << "Data de lançamento: " << endl;
     cin >> data_lancamento;
-    cout << "Categorias do filme: " << endl;
+    cout << "Categorias do documentario: " << endl;
     categorias = this->adicionarCategorias();
     cout << "Nome do diretor: " << endl;
     cin >> diretor;
