@@ -4,7 +4,7 @@
 
 PROG = programa
 
-EXE = bin/
+EXE = 
 OBJ = build/
 INC = headers/
 SRC = src/
