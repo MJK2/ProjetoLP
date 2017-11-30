@@ -13,9 +13,12 @@ CC = g++
 CPPFLAGS = -O0 -g -pedantic -std=c++11
 OBJS = $(OBJ)main.o $(OBJ)video.o $(OBJ)filme.o $(OBJ)documentario.o $(OBJ)serie.o $(OBJ)controller.o $(OBJ)episodio.o 
 
+build_bin: 
+	mkdir build && mkdir bin && make $(EXE)$(PROG) || make $(EXE)$(PROG)
+
 
 $(EXE)$(PROG): $(OBJS)
-	$(CC)  $(OBJS)  -o $@ 
+	 $(CC)  $(OBJS)  -o $@ 
 
 $(OBJ)main.o: $(INC)controller.h 
 	$(CC) $(CPPFLAGS) -c $(SRC)main.cpp  -o $@ 
