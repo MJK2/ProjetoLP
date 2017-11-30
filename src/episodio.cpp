@@ -3,7 +3,7 @@
 Episodio::Episodio(string new_nome,
         string new_descricao,
         string new_duracao,
-        Date new_data_lancamento,
+        string new_data_lancamento,
         vector<string> new_categoria, 
         int num_ep,
         int temporada)
@@ -20,7 +20,7 @@ Episodio::Episodio(string new_nome,
 void Episodio::setVideo(string new_nome,
         string new_descricao,
         string new_duracao,
-        Date new_data_lancamento,
+        string new_data_lancamento,
         vector<string> new_categoria, 
         int num_ep,
         int temporada)

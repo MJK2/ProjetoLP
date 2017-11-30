@@ -4,6 +4,18 @@
 Controller::Controller(){
     bool control = true;
     int option;
+    string line;
+
+    ifstream filmes;
+    filmes.open("data/filmes.dat");
+    if (filmes.is_open())
+    {
+        while (getline(filmes, line))
+        {
+            this->filmes.push_back(this->stringToFilme(line));
+        }
+        filmes.close();
+    }
 
     system("clear");
     cout << "======== Catálogo de vídeos ========" << endl;
@@ -37,6 +49,7 @@ Controller::Controller(){
      }
 }
 
+
 Controller::~Controller(){
     ofstream filmes;
     filmes.open ("data/filmes.dat");
@@ -44,6 +57,64 @@ Controller::~Controller(){
         filmes << it->writeFilme() << endl;
     }
     filmes.close();
+}
+
+Filme Controller::stringToFilme(string line){
+    int pipe_counter = 0;
+    string data;
+    vector<string> params;
+    vector<string> categoria;
+    vector<string> elenco;
+
+    for (size_t i = 0; i != line.length(); i++)
+    {
+        if (line[i] != ' ' && line[i] != '|')
+        {
+            data += line[i];
+        }
+        else if (line[i] == ' ')
+        {
+            params.push_back(data);
+            data = "";
+        }
+        else if (line[i] == '|')
+        {
+            pipe_counter++;
+            i++;
+            while (line[i] != '|')
+            {
+                if (line[i] != ' ' && line[i] != '|')
+                {
+                    data += line[i];
+                }
+                else if(line[i] == ' ')
+                {
+                    if (pipe_counter < 3)
+                    {
+                        categoria.push_back(data);
+                    }
+                    else
+                    {
+                        elenco.push_back(data);
+                    }
+
+                    data = "";
+                }
+
+                i++;
+            }
+        }
+    }
+
+    Filme filme(params[0],
+                params[1],
+                params[2],
+                params[3],
+                categoria,
+                params[4],
+                elenco);
+    
+    return filme;
 }
 
 void Controller::consultarCatalogo()
@@ -149,7 +220,7 @@ void Controller::adicionarFilme(){
     string nome;
     string descricao;
     string duracao;
-    Date data_lancamento;
+    string data_lancamento;
     vector<string> categorias; 
     string diretor;
     vector<string> elenco;
@@ -161,6 +232,8 @@ void Controller::adicionarFilme(){
     cin >> descricao;
     cout << "Duração: " << endl;
     cin >> duracao;
+    cout << "Data de lançamento: " << endl;
+    cin >> data_lancamento;
     cout << "Categorias do filme: " << endl;
     categorias = this->adicionarCategorias();
     cout << "Nome do diretor: " << endl;

@@ -12,7 +12,7 @@ Documentario::Documentario(
     string new_descricao,
     string new_duracao,
     vector<string> new_categoria,
-    Date new_data_lancamento,
+    string new_data_lancamento,
     string diretor)
 {
     this->nome = new_nome;
@@ -36,8 +36,7 @@ void Documentario::printVideo(){
          << "Diretor: " << this->getDiretor() << endl
          << "Descrição: " << getDescricao() << endl
          << "Duração: " << getDuracao() << endl
-         << "Data de lançamento: ";
-    this->data_lancamento.printDate();
+         << "Data de lançamento: " << getDataLancamento() << endl;
     cout << "Categoria: ";
     this->printCategorias();
 }

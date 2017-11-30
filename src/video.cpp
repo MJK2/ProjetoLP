@@ -12,7 +12,7 @@ Video::Video(
       string new_nome,
       string new_descricao,
       string new_duracao,
-      Date new_data_lancamento,
+      string new_data_lancamento,
       vector<string> new_categoria)
 {
     this->nome = new_nome;
@@ -35,7 +35,7 @@ void Video::setDescricao(string new_descricao){
     this->descricao = new_descricao;
 }
 
-void Video::setDataLancamento(Date new_data_lancamento){
+void Video::setDataLancamento(string new_data_lancamento){
     this->data_lancamento = new_data_lancamento;
 }
 
@@ -55,7 +55,7 @@ string Video::getDescricao(){
     return this->descricao;
 }
 
-Date Video::getDataLancamento(){
+string Video::getDataLancamento(){
     return this->data_lancamento;
 }
 

@@ -15,7 +15,7 @@ class Filme : Video
     Filme(string new_nome,
       string new_descricao,
       string new_duracao,
-      Date new_data_lancamento,
+      string new_data_lancamento,
       vector<string> new_categoria, 
       string diretor,
       vector<string> elenco);
@@ -28,7 +28,7 @@ class Filme : Video
     void setVideo(string new_nome,
 		      string new_descricao,
 		      string new_duracao,
-		      Date new_data_lancamento,
+		      string new_data_lancamento,
 		      vector<string> new_categoria, 
 		      string diretor,
 		      vector<string> elenco);
