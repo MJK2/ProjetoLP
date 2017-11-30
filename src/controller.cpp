@@ -181,6 +181,8 @@ void Controller::gerenciarFilmes(){
     if(cin >> option){
         if(option == 1){
             this->adicionarFilme();
+        }if(option == 2){
+            this->editarFilme();
         }
     }
 }
@@ -267,7 +269,10 @@ void Controller::adicionarFilme(){
     
     this->filmes.push_back(filme);
 
-    cout << "Filme adicionado com sucesso!" << endl;
+    cout << "Filme adicionado com sucesso! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
 
     this->gerenciarFilmes();
 }
@@ -288,4 +293,60 @@ void Controller::listarFilmes(){
     cin.get();
     this->consultarCatalogo();
     
+}
+
+void Controller::editarFilme()
+{
+    system("clear");
+    int count = 1, id;
+    cout << "======== Editar filme ========" << endl;
+    cout << "Informe o número do filme que desejas editar." << endl;
+
+    for (auto it(this->filmes.begin()); it != this->filmes.end(); it++)
+    {
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    cin >> id;
+    system("clear");
+
+    string nome;
+    string descricao;
+    string duracao;
+    string data_lancamento;
+    vector<string> categorias;
+    string diretor;
+    vector<string> elenco;
+
+    cout << "======== Editar Filme " << id <<" ========" << endl;
+    cout << "Título do filme: " << endl;
+    cin >> nome;
+    cout << "Descricao: " << endl;
+    cin >> descricao;
+    cout << "Duração: " << endl;
+    cin >> duracao;
+    cout << "Data de lançamento: " << endl;
+    cin >> data_lancamento;
+    cout << "Categorias do filme: " << endl;
+    categorias = this->adicionarCategorias();
+    cout << "Nome do diretor: " << endl;
+    cin >> diretor;
+    cout << "Elenco: " << endl;
+    elenco = this->adicionarElenco();
+
+    this->filmes[id-1].setVideo(nome,
+                descricao,
+                duracao,
+                data_lancamento,
+                categorias,
+                diretor,
+                elenco);
+
+    cout << "FILME EDITADO COM SUCESSO! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
+
+    this->gerenciarFilmes();
 }
