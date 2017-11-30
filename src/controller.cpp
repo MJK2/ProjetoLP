@@ -2,8 +2,6 @@
 #include <fstream>
 
 Controller::Controller(){
-    bool control = true;
-    int option;
     string line;
 
     ifstream filmes;
@@ -28,7 +26,14 @@ Controller::Controller(){
         documentarios.close();
     }
 
+    this->menuInicial();
+}
+
+void Controller::menuInicial(){
     system("clear");
+    bool control = true;
+    int option;
+
     cout << "======== Catálogo de vídeos ========" << endl;
     cout << "Aperte o botão da ação desejada: " << endl;
     cout << "1 - Consultar catálogo" << endl;
@@ -62,6 +67,10 @@ Controller::Controller(){
 
 
 Controller::~Controller(){
+    this->saveData();
+}
+
+void Controller::saveData(){
     ofstream filmes;
     filmes.open ("data/filmes.dat");
     for (auto it(this->filmes.begin()); it != this->filmes.end(); it++){
@@ -186,7 +195,7 @@ Documentario Controller::stringToDocumentario(string line)
 void Controller::consultarCatalogo()
 {
     system("clear");
-    int option;
+    string option;
 
     cout << "======== Consultar Catálogo ========" << endl;
     cout << "Qual catálogo deseja consultar?" << endl;
@@ -195,17 +204,23 @@ void Controller::consultarCatalogo()
     cout << "3 - Séries" << endl;
 
     if (cin >> option){
-        if (option == 1)
+        if (option == "1")
         {
             this->listarFilmes();
         }
-        else if (option == 2)
+        else if (option == "2")
         {
             this->listarDocumentarios();
         }
-        else if (option == 3)
+        else if (option == "3")
         {
             
+        }
+        else if(option == "back"){
+            this->menuInicial();
+        }
+        else if(option == "exit"){
+            this->saveData();
         }
     }
 }
@@ -214,7 +229,7 @@ void Controller::gerenciarCatalogo()
 {
     system("clear");
     
-    int option;
+    string option;
 
     cout << "======== Gerenciar Catálogo ========" << endl;
     cout << "Qual catálogo deseja gerenciar?" << endl;
@@ -223,12 +238,14 @@ void Controller::gerenciarCatalogo()
     cout << "3 - Séries" << endl;
 
     if(cin >> option){
-        if(option == 1){
+        if(option == "1"){
             this->gerenciarFilmes();
-        }else if(option == 2){
+        }else if(option == "2"){
             this->gerenciarDocumentarios();
-        }else if(option == 3){
-            this->gerenciarSeries();
+        }else if(option == "back"){
+            this->menuInicial();
+        }else if (option == "exit"){
+            this->saveData();
         }
     }
     
@@ -236,7 +253,7 @@ void Controller::gerenciarCatalogo()
 
 void Controller::gerenciarFilmes(){
     system("clear");
-    int option;
+    string option;
 
     cout << "======== Gerenciar Filme ========" << endl;
     cout << "O que deseja fazer?" << endl;
@@ -245,19 +262,23 @@ void Controller::gerenciarFilmes(){
     cout << "3 - Excluir" << endl;
 
     if(cin >> option){
-        if(option == 1){
+        if(option == "1"){
             this->adicionarFilme();
-        }else if(option == 2){
+        }else if(option == "2"){
             this->editarFilme();
-        }else if(option == 3){
+        }else if(option == "3"){
             this->excluirFilme();
+        }else if(option == "back"){
+            this->gerenciarCatalogo();
+        }else if (option == "exit"){
+            this->saveData();
         }
     }
 }
 
 void Controller::gerenciarDocumentarios(){
     system("clear");
-    int option;
+    string option;
 
     cout << "======== Gerenciar Documentários ========" << endl;
     cout << "O que deseja fazer?" << endl;
@@ -267,17 +288,22 @@ void Controller::gerenciarDocumentarios(){
 
     if (cin >> option)
     {
-        if (option == 1)
+        if (option == "1")
         {
             this->adicionarDocumentario();
         }
-        else if (option == 2)
+        else if (option == "2")
         {
             this->editarDocumentario();
         }
-        else if (option == 3)
+        else if (option == "3")
         {
             this->excluirDocumentario();
+        }
+        else if(option == "back"){
+            this->gerenciarCatalogo();
+        }else if (option == "exit"){
+            this->saveData();
         }
     }
 }

@@ -14,6 +14,8 @@ class Controller
     void consultarCatalogo();
     void gerenciarCatalogo();
 
+    void menuInicial();
+    void saveData();
     void gerenciarFilmes();
     void gerenciarDocumentarios();
     void gerenciarSeries();
