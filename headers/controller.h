@@ -54,11 +54,12 @@ class Controller
 
     /// @param line uma string que contem informacoes lidas do arquivo filme.dat
     /// @return Um objeto filme.
-    /// Pega as informacoes de um filme, contidas no arquivo filme.dat, transforma-os em um vector de strings e inicializa um objeto filme a partir deste vector.
+    /// @brief Pega as informacoes de um filme, contidas no arquivo filme.dat, transforma-os em um vector de strings e inicializa um objeto filme a partir deste vector.
     Filme stringToFilme(string line);
     /// @param line uma string que contem informacoes lidas do arquivo documentario.dat
     /// @return Um objeto Documentario.
-    /// Pega as informacoes de um documentario, contidas no arquivo documentaroi.dat, transforma-os em um vector de strings e inicializa um objeto documentario partir deste vector.
+    /// @brief Pega as informacoes de um documentario, contidas no arquivo documentaroi.dat, 
+    /// transforma-os em um vector de strings e inicializa um objeto documentario partir deste vector.
     Documentario stringToDocumentario(string line);
 
     private:
@@ -70,10 +71,10 @@ class Controller
     vector<Serie> series;
 
     /// @return Um vector de strings que representam as categorias presentes em um video.
-    /// Pede-se ao usuario a entrada de categorias de um video.
+    /// @brief Pede-se ao usuario a entrada de categorias de um video.
     vector<string> adicionarCategorias();
     /// @return um vector de string que representam o elenco presente em um video.
-    /// Pede-se ao usuario a entrada de categorias de um video.
+    /// @brief Pede-se ao usuario a entrada de categorias de um video.
     vector<string> adicionarElenco();
 };
 
