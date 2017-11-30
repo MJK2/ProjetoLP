@@ -120,12 +120,28 @@ Filme Controller::stringToFilme(string line){
 void Controller::consultarCatalogo()
 {
     system("clear");
+    int option;
 
     cout << "======== Consultar Catálogo ========" << endl;
     cout << "Qual catálogo deseja consultar?" << endl;
     cout << "1 - Filmes" << endl;
     cout << "2 - Documentarios" << endl;
     cout << "3 - Séries" << endl;
+
+    if (cin >> option){
+        if (option == 1)
+        {
+            this->listarFilmes();
+        }
+        else if (option == 2)
+        {
+            
+        }
+        else if (option == 3)
+        {
+            
+        }
+    }
 }
 
 void Controller::gerenciarCatalogo()
@@ -252,4 +268,24 @@ void Controller::adicionarFilme(){
     this->filmes.push_back(filme);
 
     cout << "Filme adicionado com sucesso!" << endl;
+
+    this->gerenciarFilmes();
+}
+
+void Controller::listarFilmes(){
+    system("clear");
+    string back;
+    int count = 1;
+    cout << "======== Filmes ========" << endl;
+    cout << "Aperte Enter para voltar" << endl;
+
+    for (auto it(this->filmes.begin()); it != this->filmes.end(); it++){
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    if(cin >> back){
+        this->consultarCatalogo();
+    }
+    
 }

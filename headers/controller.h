@@ -5,31 +5,36 @@
 #include "filme.h"
 #include "serie.h"
 
-class Controller{
-    public:
-        Controller();
-        ~Controller();
+class Controller
+{
+  public:
+    Controller();
+    ~Controller();
 
-        void consultarCatalogo();
-        void gerenciarCatalogo();
+    void consultarCatalogo();
+    void gerenciarCatalogo();
 
-        //cruds para filme
-        void adicionarFilme();
-        void editarFilme();
-        void excluirFilme();
-        void listarFilmes();
-        void listarFilme();
+    void gerenciarFilmes();
+    void gerenciarDocumentarios();
+    void gerenciarSeries();
 
-        //conversores
-        Filme stringToFilme(string line);
-    
-    private:
-        vector<Filme> filmes;
-        vector<Documentario> documentarios;
-        vector<Serie> series;    
+    //cruds para filme
+    void adicionarFilme();
+    void editarFilme();
+    void excluirFilme();
+    void listarFilmes();
+    void listarFilme();
 
-        vector<string> adicionarCategorias();  
-        vector<string> adicionarElenco(); 
+    //conversores
+    Filme stringToFilme(string line);
+
+  private:
+    vector<Filme> filmes;
+    vector<Documentario> documentarios;
+    vector<Serie> series;
+
+    vector<string> adicionarCategorias();
+    vector<string> adicionarElenco();
 };
 
 #endif

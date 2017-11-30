@@ -10,7 +10,7 @@
 #include <iostream>
 
 /// Classe que representa um Filme. Herda de Video.
-class Filme : Video
+class Filme : public Video
 {
   public:
     /// Construtor completamente preenchido da classe filme.
