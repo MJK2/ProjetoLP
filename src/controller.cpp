@@ -17,6 +17,17 @@ Controller::Controller(){
         filmes.close();
     }
 
+    ifstream documentarios;
+    documentarios.open("data/documentarios.dat");
+    if (documentarios.is_open())
+    {
+        while (getline(documentarios, line))
+        {
+            this->documentarios.push_back(this->stringToDocumentario(line));
+        }
+        documentarios.close();
+    }
+
     system("clear");
     cout << "======== Catálogo de vídeos ========" << endl;
     cout << "Aperte o botão da ação desejada: " << endl;
@@ -123,6 +134,53 @@ Filme Controller::stringToFilme(string line){
                 elenco);
     
     return filme;
+}
+
+Documentario Controller::stringToDocumentario(string line)
+{
+    string data;
+    vector<string> params;
+    vector<string> categoria;
+
+    for (size_t i = 0; i != line.length(); i++)
+    {
+        if (line[i] != ' ' && line[i] != '|')
+        {
+            data += line[i];
+        }
+        else if (line[i] == ' ')
+        {
+            params.push_back(data);
+            data = "";
+        }
+        else if (line[i] == '|')
+        {
+            i++;
+            while (line[i] != '|')
+            {
+                if (line[i] != ' ' && line[i] != '|')
+                {
+                    data += line[i];
+                }
+                else if (line[i] == ' ')
+                {
+                    categoria.push_back(data);
+                    data = "";
+                }
+
+                i++;
+            }
+        }
+    }
+
+    Documentario documentario(params[0],
+                              params[1],
+                              params[2],
+                              categoria,
+                              params[3],
+                              params[4]);
+
+    return documentario;
 }
 
 void Controller::consultarCatalogo()

@@ -27,11 +27,12 @@ class Controller
 
     //cruds para documentario
     void adicionarDocumentario();
-
+    
     //conversores
     Filme stringToFilme(string line);
+    Documentario stringToDocumentario(string line);
 
-  private:
+    private:
     vector<Filme> filmes;
     vector<Documentario> documentarios;
     vector<Serie> series;
