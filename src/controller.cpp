@@ -274,18 +274,18 @@ void Controller::adicionarFilme(){
 
 void Controller::listarFilmes(){
     system("clear");
-    string back;
+
     int count = 1;
     cout << "======== Filmes ========" << endl;
-    cout << "Aperte Enter para voltar" << endl;
+    cout << "Aperte ENTER para voltar" << endl;
 
     for (auto it(this->filmes.begin()); it != this->filmes.end(); it++){
         cout << count << " - " << it->getNome() << endl;
         count++;
     }
 
-    if(cin >> back){
-        this->consultarCatalogo();
-    }
+    cin.ignore();
+    cin.get();
+    this->consultarCatalogo();
     
 }
