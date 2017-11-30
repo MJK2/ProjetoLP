@@ -1,0 +1,115 @@
+\hypertarget{classController}{}\section{Controller Class Reference}
+\label{classController}\index{Controller@{Controller}}
+
+
+Classe que controla todo o programa.  
+
+
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classController_a95c56822d667e94b031451729ce069a9}{Controller} ()\hypertarget{classController_a95c56822d667e94b031451729ce069a9}{}\label{classController_a95c56822d667e94b031451729ce069a9}
+
+\begin{DoxyCompactList}\small\item\em Construtor vazio de \hyperlink{classController}{Controller}. Recupera os dados contidos nos .dat e chama o menu inicial. \end{DoxyCompactList}\item 
+\hyperlink{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller} ()\hypertarget{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{}\label{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}
+
+\begin{DoxyCompactList}\small\item\em Destrutor vazio de \hyperlink{classController}{Controller}. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a6d5012c343039e6b297ebfc322be7faf}{consultar\+Catalogo} ()\hypertarget{classController_a6d5012c343039e6b297ebfc322be7faf}{}\label{classController_a6d5012c343039e6b297ebfc322be7faf}
+
+\begin{DoxyCompactList}\small\item\em Demonstra ao usuario as opcoes de consulta de videos. \end{DoxyCompactList}\item 
+void \hyperlink{classController_ad86e8f30d10f48506de9129579c202e7}{gerenciar\+Catalogo} ()\hypertarget{classController_ad86e8f30d10f48506de9129579c202e7}{}\label{classController_ad86e8f30d10f48506de9129579c202e7}
+
+\begin{DoxyCompactList}\small\item\em Demonstra ao usuario as opcoes de gerenciamento (adicionar, alterar ou excluir videos). \end{DoxyCompactList}\item 
+void \hyperlink{classController_ab80bd964e9410be07f07ef3709681639}{menu\+Inicial} ()\hypertarget{classController_ab80bd964e9410be07f07ef3709681639}{}\label{classController_ab80bd964e9410be07f07ef3709681639}
+
+\begin{DoxyCompactList}\small\item\em Demonstra ao usuario as opcoes de consulta e gerenciamento de videos. \end{DoxyCompactList}\item 
+void \hyperlink{classController_aef69b3ce9427d64a8ae1c4c84289c2c7}{save\+Data} ()\hypertarget{classController_aef69b3ce9427d64a8ae1c4c84289c2c7}{}\label{classController_aef69b3ce9427d64a8ae1c4c84289c2c7}
+
+\begin{DoxyCompactList}\small\item\em Abre os arquivos .dat para escrita. Chamado apos cada alteracao executada. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a724ebc287ae34ebd68164673ad2787dd}{gerenciar\+Filmes} ()\hypertarget{classController_a724ebc287ae34ebd68164673ad2787dd}{}\label{classController_a724ebc287ae34ebd68164673ad2787dd}
+
+\begin{DoxyCompactList}\small\item\em Demonstra ao usuario as opcoes de gerenciamento de filmes (adicionar, alterar ou excluir filmes). \end{DoxyCompactList}\item 
+void \hyperlink{classController_a4a2deed21d64ed714daefefeb77ba945}{gerenciar\+Documentarios} ()\hypertarget{classController_a4a2deed21d64ed714daefefeb77ba945}{}\label{classController_a4a2deed21d64ed714daefefeb77ba945}
+
+\begin{DoxyCompactList}\small\item\em Demonstra ao usuario as opcoes de gerenciamento de documentarios (adicionar, alterar ou excluir documentarios). \end{DoxyCompactList}\item 
+void \hyperlink{classController_a84fb77c50f103ab5c46f6666c7aff7a0}{adicionar\+Filme} ()\hypertarget{classController_a84fb77c50f103ab5c46f6666c7aff7a0}{}\label{classController_a84fb77c50f103ab5c46f6666c7aff7a0}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um filme no database a partir de entradas do usuario. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a2b1e0e97b5888d2afffb1aa26429d9b2}{editar\+Filme} ()\hypertarget{classController_a2b1e0e97b5888d2afffb1aa26429d9b2}{}\label{classController_a2b1e0e97b5888d2afffb1aa26429d9b2}
+
+\begin{DoxyCompactList}\small\item\em Edita um filme ja existente no database a partir de entradas do usuario. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a43ee7965a996cd4ae8d9ae0638b5ce4f}{excluir\+Filme} ()\hypertarget{classController_a43ee7965a996cd4ae8d9ae0638b5ce4f}{}\label{classController_a43ee7965a996cd4ae8d9ae0638b5ce4f}
+
+\begin{DoxyCompactList}\small\item\em Exclui um filme ja existente no database utilizando o nome do filme. \end{DoxyCompactList}\item 
+void \hyperlink{classController_aa0344ce7ffd9f77dfbe46ae847736a6a}{listar\+Filmes} ()\hypertarget{classController_aa0344ce7ffd9f77dfbe46ae847736a6a}{}\label{classController_aa0344ce7ffd9f77dfbe46ae847736a6a}
+
+\begin{DoxyCompactList}\small\item\em Imprime todos os nomes de filmes presentes no database. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a650b48667267003895f810591ad2bee0}{adicionar\+Documentario} ()\hypertarget{classController_a650b48667267003895f810591ad2bee0}{}\label{classController_a650b48667267003895f810591ad2bee0}
+
+\begin{DoxyCompactList}\small\item\em Adiciona um documentario no database a partir de entradas do usuario. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a70aa8461ae785c75ae6f4cda12be73fd}{listar\+Documentarios} ()\hypertarget{classController_a70aa8461ae785c75ae6f4cda12be73fd}{}\label{classController_a70aa8461ae785c75ae6f4cda12be73fd}
+
+\begin{DoxyCompactList}\small\item\em Imprime todos os nomes de documentarios presentes no database. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a8e3af17b91fb97c424f71763a52efc7c}{editar\+Documentario} ()\hypertarget{classController_a8e3af17b91fb97c424f71763a52efc7c}{}\label{classController_a8e3af17b91fb97c424f71763a52efc7c}
+
+\begin{DoxyCompactList}\small\item\em Edita um documentario ja existente no database a partir de entradas do usuario. \end{DoxyCompactList}\item 
+void \hyperlink{classController_add9e27a70f03537309a7baed09bd94fd}{excluir\+Documentario} ()\hypertarget{classController_add9e27a70f03537309a7baed09bd94fd}{}\label{classController_add9e27a70f03537309a7baed09bd94fd}
+
+\begin{DoxyCompactList}\small\item\em Exclui um documentario ja existente no database a partir do nome do documentario. \end{DoxyCompactList}\item 
+\hyperlink{classFilme}{Filme} \hyperlink{classController_aafde6d0c728bb9d12250e3d7da8f9706}{string\+To\+Filme} (string line)
+\begin{DoxyCompactList}\small\item\em Pega as informacoes de um filme, contidas no arquivo filme.\+dat, transforma-\/os em um vector de strings e inicializa um objeto filme a partir deste vector. \end{DoxyCompactList}\item 
+\hyperlink{classDocumentario}{Documentario} \hyperlink{classController_a159cba9377da81c1c235aafa16c4ca1a}{string\+To\+Documentario} (string line)
+\begin{DoxyCompactList}\small\item\em Pega as informacoes de um documentario, contidas no arquivo documentaroi.\+dat, transforma-\/os em um vector de strings e inicializa um objeto documentario partir deste vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que controla todo o programa. 
+
+\subsection{Member Function Documentation}
+\index{Controller@{Controller}!string\+To\+Documentario@{string\+To\+Documentario}}
+\index{string\+To\+Documentario@{string\+To\+Documentario}!Controller@{Controller}}
+\subsubsection[{\texorpdfstring{string\+To\+Documentario(string line)}{stringToDocumentario(string line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Documentario} Controller\+::string\+To\+Documentario (
+\begin{DoxyParamCaption}
+\item[{string}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{classController_a159cba9377da81c1c235aafa16c4ca1a}{}\label{classController_a159cba9377da81c1c235aafa16c4ca1a}
+
+
+Pega as informacoes de um documentario, contidas no arquivo documentaroi.\+dat, transforma-\/os em um vector de strings e inicializa um objeto documentario partir deste vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & uma string que contem informacoes lidas do arquivo documentario.\+dat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um objeto \hyperlink{classDocumentario}{Documentario}. 
+\end{DoxyReturn}
+\index{Controller@{Controller}!string\+To\+Filme@{string\+To\+Filme}}
+\index{string\+To\+Filme@{string\+To\+Filme}!Controller@{Controller}}
+\subsubsection[{\texorpdfstring{string\+To\+Filme(string line)}{stringToFilme(string line)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filme} Controller\+::string\+To\+Filme (
+\begin{DoxyParamCaption}
+\item[{string}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{classController_aafde6d0c728bb9d12250e3d7da8f9706}{}\label{classController_aafde6d0c728bb9d12250e3d7da8f9706}
+
+
+Pega as informacoes de um filme, contidas no arquivo filme.\+dat, transforma-\/os em um vector de strings e inicializa um objeto filme a partir deste vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & uma string que contem informacoes lidas do arquivo filme.\+dat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um objeto filme. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{controller_8h}{controller.\+h}\end{DoxyCompactItemize}

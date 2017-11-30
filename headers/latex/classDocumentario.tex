@@ -1,0 +1,112 @@
+\hypertarget{classDocumentario}{}\section{Documentario Class Reference}
+\label{classDocumentario}\index{Documentario@{Documentario}}
+
+
+Classe que representa um \hyperlink{classDocumentario}{Documentario}. Herda de \hyperlink{classVideo}{Video}.  
+
+
+
+
+{\ttfamily \#include $<$documentario.\+h$>$}
+
+
+
+Inheritance diagram for Documentario\+:
+% FIG 0
+
+
+Collaboration diagram for Documentario\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDocumentario_a2a3230879c151f742ebaa5645d86f284}{Documentario} ()\hypertarget{classDocumentario_a2a3230879c151f742ebaa5645d86f284}{}\label{classDocumentario_a2a3230879c151f742ebaa5645d86f284}
+
+\begin{DoxyCompactList}\small\item\em Construtor vazio de \hyperlink{classDocumentario}{Documentario}. \end{DoxyCompactList}\item 
+\hyperlink{classDocumentario_af1e9237063a8f47cab171b83ebd17e68}{Documentario} (string new\+\_\+nome, string new\+\_\+descricao, string new\+\_\+duracao, vector$<$ string $>$ \hyperlink{classVideo_a8ff58ab1ddf14d474ea7174b13ed05b4}{categoria}, string new\+\_\+data\+\_\+lancamento, string diretor)\hypertarget{classDocumentario_af1e9237063a8f47cab171b83ebd17e68}{}\label{classDocumentario_af1e9237063a8f47cab171b83ebd17e68}
+
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \hyperlink{classDocumentario}{Documentario}. \end{DoxyCompactList}\item 
+void \hyperlink{classDocumentario_abe00fa763c2761ed79f80fb7b2a99de0}{print\+Video} () override\hypertarget{classDocumentario_abe00fa763c2761ed79f80fb7b2a99de0}{}\label{classDocumentario_abe00fa763c2761ed79f80fb7b2a99de0}
+
+\begin{DoxyCompactList}\small\item\em Sobrecarrega o metodo \hyperlink{classDocumentario_abe00fa763c2761ed79f80fb7b2a99de0}{print\+Video()}, que pertence a classe pai \hyperlink{classVideo}{Video}. Imprime todas as informacoes de um \hyperlink{classDocumentario}{Documentario}. \end{DoxyCompactList}\item 
+\hyperlink{classVideo}{Video} \hyperlink{classDocumentario_a2e5db493cca5e2e6803368d63215a978}{get\+Video} ()
+\begin{DoxyCompactList}\small\item\em Retorna um objeto documentario. \end{DoxyCompactList}\item 
+string \hyperlink{classDocumentario_acad522309e6e8c8a56324897ffdab5f4}{get\+Diretor} ()
+\begin{DoxyCompactList}\small\item\em O novo diretor de um documentario. \end{DoxyCompactList}\item 
+void \hyperlink{classDocumentario_a0998f80222836821c7de4cc4df2153f8}{set\+Diretor} (string new\+\_\+diretor)
+\begin{DoxyCompactList}\small\item\em Insere um novo diretor para um documentario. \end{DoxyCompactList}\item 
+string \hyperlink{classDocumentario_a02bb364042381520cc90b03da9f73ffd}{write\+Documentario} ()
+\begin{DoxyCompactList}\small\item\em Concatena todas as informacoes de um documentario em uma unica string para persistir dados no arquivo documentario.\+dat. \end{DoxyCompactList}\item 
+void \hyperlink{classDocumentario_abb7ad2e1d60b0dea2f39285d73a883f2}{set\+Video} (string new\+\_\+nome, string new\+\_\+descricao, string new\+\_\+duracao, vector$<$ string $>$ new\+\_\+categoria, string new\+\_\+data\+\_\+lancamento, string diretor)\hypertarget{classDocumentario_abb7ad2e1d60b0dea2f39285d73a883f2}{}\label{classDocumentario_abb7ad2e1d60b0dea2f39285d73a883f2}
+
+\begin{DoxyCompactList}\small\item\em Insere novas informacoes em um \hyperlink{classDocumentario}{Documentario}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe que representa um \hyperlink{classDocumentario}{Documentario}. Herda de \hyperlink{classVideo}{Video}. 
+
+\subsection{Member Function Documentation}
+\index{Documentario@{Documentario}!get\+Diretor@{get\+Diretor}}
+\index{get\+Diretor@{get\+Diretor}!Documentario@{Documentario}}
+\subsubsection[{\texorpdfstring{get\+Diretor()}{getDiretor()}}]{\setlength{\rightskip}{0pt plus 5cm}string Documentario\+::get\+Diretor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDocumentario_acad522309e6e8c8a56324897ffdab5f4}{}\label{classDocumentario_acad522309e6e8c8a56324897ffdab5f4}
+
+
+O novo diretor de um documentario. 
+
+\begin{DoxyReturn}{Returns}
+O diretor do documentario. 
+\end{DoxyReturn}
+\index{Documentario@{Documentario}!get\+Video@{get\+Video}}
+\index{get\+Video@{get\+Video}!Documentario@{Documentario}}
+\subsubsection[{\texorpdfstring{get\+Video()}{getVideo()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Video} Documentario\+::get\+Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDocumentario_a2e5db493cca5e2e6803368d63215a978}{}\label{classDocumentario_a2e5db493cca5e2e6803368d63215a978}
+
+
+Retorna um objeto documentario. 
+
+\begin{DoxyReturn}{Returns}
+Um objeto \hyperlink{classVideo}{Video}, por meio de poliformismo, sera um objeto \hyperlink{classDocumentario}{Documentario}. 
+\end{DoxyReturn}
+\index{Documentario@{Documentario}!set\+Diretor@{set\+Diretor}}
+\index{set\+Diretor@{set\+Diretor}!Documentario@{Documentario}}
+\subsubsection[{\texorpdfstring{set\+Diretor(string new\+\_\+diretor)}{setDiretor(string new_diretor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Documentario\+::set\+Diretor (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+\_\+diretor}
+\end{DoxyParamCaption}
+)}\hypertarget{classDocumentario_a0998f80222836821c7de4cc4df2153f8}{}\label{classDocumentario_a0998f80222836821c7de4cc4df2153f8}
+
+
+Insere um novo diretor para um documentario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+diretor} & o novo diretor de um documentario. \\
+\hline
+\end{DoxyParams}
+\index{Documentario@{Documentario}!write\+Documentario@{write\+Documentario}}
+\index{write\+Documentario@{write\+Documentario}!Documentario@{Documentario}}
+\subsubsection[{\texorpdfstring{write\+Documentario()}{writeDocumentario()}}]{\setlength{\rightskip}{0pt plus 5cm}string Documentario\+::write\+Documentario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDocumentario_a02bb364042381520cc90b03da9f73ffd}{}\label{classDocumentario_a02bb364042381520cc90b03da9f73ffd}
+
+
+Concatena todas as informacoes de um documentario em uma unica string para persistir dados no arquivo documentario.\+dat. 
+
+\begin{DoxyReturn}{Returns}
+todas as informacoes de um documentario em uma string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{documentario_8h}{documentario.\+h}\end{DoxyCompactItemize}

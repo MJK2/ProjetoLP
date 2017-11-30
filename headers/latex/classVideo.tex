@@ -1,0 +1,232 @@
+\hypertarget{classVideo}{}\section{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+
+
+Classe que representa um \hyperlink{classVideo}{Video}. Pai das classes \hyperlink{classDocumentario}{Documentario} e \hyperlink{classFilme}{Filme}.  
+
+
+
+
+{\ttfamily \#include $<$video.\+h$>$}
+
+
+
+Inheritance diagram for Video\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}{Video} ()\hypertarget{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}{}\label{classVideo_ab67336c2c5b6227a9635bc7dcd6af543}
+
+\begin{DoxyCompactList}\small\item\em O construtor vazio de \hyperlink{classVideo}{Video}. \end{DoxyCompactList}\item 
+\hyperlink{classVideo_a103c29f246e60bc4bffa69540810833d}{Video} (string new\+\_\+nome, string new\+\_\+descricao, string new\+\_\+duracao, string new\+\_\+data\+\_\+lancamento, vector$<$ string $>$ new\+\_\+categoria)\hypertarget{classVideo_a103c29f246e60bc4bffa69540810833d}{}\label{classVideo_a103c29f246e60bc4bffa69540810833d}
+
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \hyperlink{classVideo}{Video}. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_ac3035c8de729710bc0f216944f52108e}{get\+Nome} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome do video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a4bc57b6ca1b388bf6e6069fc47fdad2e}{get\+Duracao} ()
+\begin{DoxyCompactList}\small\item\em Retorna a duracao de um video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a7c849d776eec017cb3d8a537fc06d39d}{get\+Descricao} ()
+\begin{DoxyCompactList}\small\item\em Retorna a descricao de um video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a8f9ffc81e5501047af1ce4d11510f30c}{get\+Data\+Lancamento} ()
+\begin{DoxyCompactList}\small\item\em Retorna a data de lancamento de um video. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classVideo_a89e9a95b481f991696120c50942bdcc1}{get\+Categoria} ()
+\begin{DoxyCompactList}\small\item\em Retorna as categorias de um video, como um vector de strings. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_a575297aa1da19ad764903394ffaad070}{set\+Nome} (string new\+\_\+nome)
+\begin{DoxyCompactList}\small\item\em Insere um novo nome para um video. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_a8f962ae1a15512ae867920ede1923873}{set\+Duracao} (string new\+\_\+duracao)
+\begin{DoxyCompactList}\small\item\em Insere uma nova duracao para um video. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_a133d51a6d192c248c1013bdd81508bcb}{set\+Descricao} (string new\+\_\+descricao)
+\begin{DoxyCompactList}\small\item\em Insere um novo nome para um video. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_aad4e9417ebbb6c8418a3a3769f4ff7a8}{set\+Data\+Lancamento} (string new\+\_\+data\+\_\+lancamento)
+\begin{DoxyCompactList}\small\item\em Insere uma nova descricao para um video. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_acfd3e3947d7ffabef36eb18cf4049a48}{set\+Categoria} (vector$<$ string $>$ new\+\_\+categoria)
+\begin{DoxyCompactList}\small\item\em Insere uma nova categoria para um video. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_ad95dd3840a6818ecd144b882b4fd0902}{print\+Categorias} ()\hypertarget{classVideo_ad95dd3840a6818ecd144b882b4fd0902}{}\label{classVideo_ad95dd3840a6818ecd144b882b4fd0902}
+
+\begin{DoxyCompactList}\small\item\em Imprime na tela todas as categorias contidas em um video. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classVideo_affd6d79b2807e62a9ed3cf343541edd0}{print\+Video} ()\hypertarget{classVideo_affd6d79b2807e62a9ed3cf343541edd0}{}\label{classVideo_affd6d79b2807e62a9ed3cf343541edd0}
+
+\begin{DoxyCompactList}\small\item\em Metodo virtual a ser utilizado pelas classes filhas. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classVideo_ab3be5dacd179c1bf7e410e27de32c3f1}{set\+Video} ()\hypertarget{classVideo_ab3be5dacd179c1bf7e410e27de32c3f1}{}\label{classVideo_ab3be5dacd179c1bf7e410e27de32c3f1}
+
+\begin{DoxyCompactList}\small\item\em Insere novas informacoes em um video. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classVideo_a6b49d73a9ec7d7b99ef5c809f94514ca}{nome}\hypertarget{classVideo_a6b49d73a9ec7d7b99ef5c809f94514ca}{}\label{classVideo_a6b49d73a9ec7d7b99ef5c809f94514ca}
+
+\begin{DoxyCompactList}\small\item\em O nome do video. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classVideo_a8ff58ab1ddf14d474ea7174b13ed05b4}{categoria}\hypertarget{classVideo_a8ff58ab1ddf14d474ea7174b13ed05b4}{}\label{classVideo_a8ff58ab1ddf14d474ea7174b13ed05b4}
+
+\begin{DoxyCompactList}\small\item\em Um vector de strings que representa as categorias de um video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a1dec1f3fc1f160b6ae4210bdeca1eaf0}{duracao}\hypertarget{classVideo_a1dec1f3fc1f160b6ae4210bdeca1eaf0}{}\label{classVideo_a1dec1f3fc1f160b6ae4210bdeca1eaf0}
+
+\begin{DoxyCompactList}\small\item\em a duracao de um video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a4bf01d0dcbd8ac417c65755fe1a60f2d}{descricao}\hypertarget{classVideo_a4bf01d0dcbd8ac417c65755fe1a60f2d}{}\label{classVideo_a4bf01d0dcbd8ac417c65755fe1a60f2d}
+
+\begin{DoxyCompactList}\small\item\em a descricao de um video. \end{DoxyCompactList}\item 
+string \hyperlink{classVideo_a90f3f4e7d9564a225445acc6248f15d9}{data\+\_\+lancamento}\hypertarget{classVideo_a90f3f4e7d9564a225445acc6248f15d9}{}\label{classVideo_a90f3f4e7d9564a225445acc6248f15d9}
+
+\begin{DoxyCompactList}\small\item\em a data de lancamento de um video. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa um \hyperlink{classVideo}{Video}. Pai das classes \hyperlink{classDocumentario}{Documentario} e \hyperlink{classFilme}{Filme}. 
+
+\subsection{Member Function Documentation}
+\index{Video@{Video}!get\+Categoria@{get\+Categoria}}
+\index{get\+Categoria@{get\+Categoria}!Video@{Video}}
+\subsubsection[{\texorpdfstring{get\+Categoria()}{getCategoria()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Video\+::get\+Categoria (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a89e9a95b481f991696120c50942bdcc1}{}\label{classVideo_a89e9a95b481f991696120c50942bdcc1}
+
+
+Retorna as categorias de um video, como um vector de strings. 
+
+\begin{DoxyReturn}{Returns}
+um vector de strings que representa as categorias de um video. 
+\end{DoxyReturn}
+\index{Video@{Video}!get\+Data\+Lancamento@{get\+Data\+Lancamento}}
+\index{get\+Data\+Lancamento@{get\+Data\+Lancamento}!Video@{Video}}
+\subsubsection[{\texorpdfstring{get\+Data\+Lancamento()}{getDataLancamento()}}]{\setlength{\rightskip}{0pt plus 5cm}string Video\+::get\+Data\+Lancamento (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a8f9ffc81e5501047af1ce4d11510f30c}{}\label{classVideo_a8f9ffc81e5501047af1ce4d11510f30c}
+
+
+Retorna a data de lancamento de um video. 
+
+\begin{DoxyReturn}{Returns}
+a data de lancamento de um video. 
+\end{DoxyReturn}
+\index{Video@{Video}!get\+Descricao@{get\+Descricao}}
+\index{get\+Descricao@{get\+Descricao}!Video@{Video}}
+\subsubsection[{\texorpdfstring{get\+Descricao()}{getDescricao()}}]{\setlength{\rightskip}{0pt plus 5cm}string Video\+::get\+Descricao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a7c849d776eec017cb3d8a537fc06d39d}{}\label{classVideo_a7c849d776eec017cb3d8a537fc06d39d}
+
+
+Retorna a descricao de um video. 
+
+\begin{DoxyReturn}{Returns}
+a descricao de um video. 
+\end{DoxyReturn}
+\index{Video@{Video}!get\+Duracao@{get\+Duracao}}
+\index{get\+Duracao@{get\+Duracao}!Video@{Video}}
+\subsubsection[{\texorpdfstring{get\+Duracao()}{getDuracao()}}]{\setlength{\rightskip}{0pt plus 5cm}string Video\+::get\+Duracao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a4bc57b6ca1b388bf6e6069fc47fdad2e}{}\label{classVideo_a4bc57b6ca1b388bf6e6069fc47fdad2e}
+
+
+Retorna a duracao de um video. 
+
+\begin{DoxyReturn}{Returns}
+a duracao de um video. 
+\end{DoxyReturn}
+\index{Video@{Video}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Video@{Video}}
+\subsubsection[{\texorpdfstring{get\+Nome()}{getNome()}}]{\setlength{\rightskip}{0pt plus 5cm}string Video\+::get\+Nome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_ac3035c8de729710bc0f216944f52108e}{}\label{classVideo_ac3035c8de729710bc0f216944f52108e}
+
+
+Retorna o nome do video. 
+
+\begin{DoxyReturn}{Returns}
+o nome do video. 
+\end{DoxyReturn}
+\index{Video@{Video}!set\+Categoria@{set\+Categoria}}
+\index{set\+Categoria@{set\+Categoria}!Video@{Video}}
+\subsubsection[{\texorpdfstring{set\+Categoria(vector$<$ string $>$ new\+\_\+categoria)}{setCategoria(vector< string > new_categoria)}}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Categoria (
+\begin{DoxyParamCaption}
+\item[{vector$<$ string $>$}]{new\+\_\+categoria}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_acfd3e3947d7ffabef36eb18cf4049a48}{}\label{classVideo_acfd3e3947d7ffabef36eb18cf4049a48}
+
+
+Insere uma nova categoria para um video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+categoria} & as novas categorias de um filme, representadas por um vector de strings. \\
+\hline
+\end{DoxyParams}
+\index{Video@{Video}!set\+Data\+Lancamento@{set\+Data\+Lancamento}}
+\index{set\+Data\+Lancamento@{set\+Data\+Lancamento}!Video@{Video}}
+\subsubsection[{\texorpdfstring{set\+Data\+Lancamento(string new\+\_\+data\+\_\+lancamento)}{setDataLancamento(string new_data_lancamento)}}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Data\+Lancamento (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+\_\+data\+\_\+lancamento}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_aad4e9417ebbb6c8418a3a3769f4ff7a8}{}\label{classVideo_aad4e9417ebbb6c8418a3a3769f4ff7a8}
+
+
+Insere uma nova descricao para um video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+data\+\_\+lancamento} & a nova data de lancamento de um video. \\
+\hline
+\end{DoxyParams}
+\index{Video@{Video}!set\+Descricao@{set\+Descricao}}
+\index{set\+Descricao@{set\+Descricao}!Video@{Video}}
+\subsubsection[{\texorpdfstring{set\+Descricao(string new\+\_\+descricao)}{setDescricao(string new_descricao)}}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Descricao (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+\_\+descricao}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a133d51a6d192c248c1013bdd81508bcb}{}\label{classVideo_a133d51a6d192c248c1013bdd81508bcb}
+
+
+Insere um novo nome para um video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+descricao} & a nova descricao de um video. \\
+\hline
+\end{DoxyParams}
+\index{Video@{Video}!set\+Duracao@{set\+Duracao}}
+\index{set\+Duracao@{set\+Duracao}!Video@{Video}}
+\subsubsection[{\texorpdfstring{set\+Duracao(string new\+\_\+duracao)}{setDuracao(string new_duracao)}}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Duracao (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+\_\+duracao}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a8f962ae1a15512ae867920ede1923873}{}\label{classVideo_a8f962ae1a15512ae867920ede1923873}
+
+
+Insere uma nova duracao para um video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+duracao} & a nova duracao de um video. \\
+\hline
+\end{DoxyParams}
+\index{Video@{Video}!set\+Nome@{set\+Nome}}
+\index{set\+Nome@{set\+Nome}!Video@{Video}}
+\subsubsection[{\texorpdfstring{set\+Nome(string new\+\_\+nome)}{setNome(string new_nome)}}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Nome (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+\_\+nome}
+\end{DoxyParamCaption}
+)}\hypertarget{classVideo_a575297aa1da19ad764903394ffaad070}{}\label{classVideo_a575297aa1da19ad764903394ffaad070}
+
+
+Insere um novo nome para um video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+nome} & o novo nome de um video. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{video_8h}{video.\+h}\end{DoxyCompactItemize}

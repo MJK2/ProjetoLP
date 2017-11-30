@@ -40,4 +40,3 @@ clean:
 	
 cleanall:
 	rm -f $(OBJS) $(PROG)
-	
