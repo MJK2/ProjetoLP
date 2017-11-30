@@ -181,8 +181,10 @@ void Controller::gerenciarFilmes(){
     if(cin >> option){
         if(option == 1){
             this->adicionarFilme();
-        }if(option == 2){
+        }else if(option == 2){
             this->editarFilme();
+        }else if(option == 3){
+            this->excluirFilme();
         }
     }
 }
@@ -349,4 +351,27 @@ void Controller::editarFilme()
     cin.get();
 
     this->gerenciarFilmes();
+}
+
+void Controller::excluirFilme(){
+    system("clear");
+    int count = 1, id;
+    cout << "======== Editar filme ========" << endl;
+    cout << "Informe o número do filme que desejas excluir." << endl;
+
+    for (auto it(this->filmes.begin()); it != this->filmes.end(); it++)
+    {
+        cout << count << " - " << it->getNome() << endl;
+        count++;
+    }
+
+    cin >> id;
+    this->filmes.erase(this->filmes.begin() + (id-1));
+    cout << "FILME EXLUÍDO COM SUCESSO! Aperte ENTER para continuar" << endl;
+
+    cin.ignore();
+    cin.get();
+
+    this->gerenciarFilmes();
+
 }
