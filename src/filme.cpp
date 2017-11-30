@@ -31,6 +31,7 @@ void Filme::printVideo(){
 	cout << "Diretor: " << diretor << std::endl;
 	showElenco();
 }
+
 void Filme::setVideo(string new_nome,
 		      string new_descricao,
 		      string new_duracao,

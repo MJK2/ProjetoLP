@@ -13,10 +13,6 @@ class Controller{
         void consultarCatalogo();
         void gerenciarCatalogo();
 
-        void gerenciarFilmes();
-        void gerenciarDocumentarios();
-        void gerenciarSeries();
-
         //cruds para filme
         void adicionarFilme();
         void editarFilme();
