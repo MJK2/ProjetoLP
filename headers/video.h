@@ -72,7 +72,7 @@ class Video{
         /// Metodo virtual a ser utilizado pelas classes filhas.
         virtual void printVideo();
         /// Insere novas informacoes em um video.
-        void setVideo();
+        virtual void setVideo();
 };
 
 #endif
